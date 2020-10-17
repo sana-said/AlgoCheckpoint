@@ -1,0 +1,25 @@
+ALGORITHM SOMME_SOLUTION1
+VAR
+   SUM : INTEGER:= 0;
+   i,j : INTEGER;
+   array1 : ARRAY_OF  INTEGER[100];
+   array2 : ARRAY_OF INTEGER[100];
+
+BEGIN
+   write ('Donnez le tableau N°1');
+   read(array1)
+
+   write ('Donnez le tableau N°2');
+   read(array2)
+
+   FOR i FROM 0 TO array1.length-1 step 1 Do
+   FOR j FROM 0 TO array2.length-1 step1 Do
+     IF(array1[i] = array2[j])THEN
+     SUM := array2[j]+ array1[i];
+     END IF
+    END FOR
+    END FOR
+
+    
+    write (SUM);
+END

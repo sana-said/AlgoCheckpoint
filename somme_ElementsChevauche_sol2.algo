@@ -1,0 +1,26 @@
+ALGORITHM SOMME_SOLUTION2
+VAR
+  HTAB1:  HASH_TABLE<CHAR,INTEGER>
+  HTAB2: HASH_TABLE<CHAR,INTEGER>
+  array1: HTAB1.getkeys()
+  array2: HTAB2.getkeys()
+    i,j : INTEGER
+  sum :INTEGER := 0
+
+BEGIN
+   write('Donner la premiere Htab')
+  read (HTAB1)
+  write('Donner la deuxieme Htab')
+  read (HTAB2)
+
+  FOR i FROM 0 TO array1.length-1 STEP1 Do
+  FOR j FROM 0 TO array2.length-1 STEP1 DO 
+  IF (HTAB1.get(array1[i]) <> HTAB2.get(array2[j])) THEN
+  sum := HTAB2.get(array2[j]) + HTAB1.get(array1[i]);
+  END IF
+  END FOR
+  END FOR
+
+
+  write (sum)
+END
